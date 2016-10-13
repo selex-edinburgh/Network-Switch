@@ -27,16 +27,16 @@ function valid_ip()
 # If run directly, execute some tests.
 if [[ "$(basename $0 .sh)" == 'valid_ip' ]]; then
 	ips='
-	4.2.2.2
-	a.b.c.d
-	192.168.1.1
-	0.0.0.0
-	255.255.255.255
-	255.255.255.256
-	192.168.0.1
-	192.168.0
-	1234.123.123.123
-	'
+	    4.2.2.2
+	    a.b.c.d
+	    192.168.1.1
+	    0.0.0.0
+	    255.255.255.255
+	    255.255.255.256
+	    192.168.0.1
+	    192.168.0
+	    1234.123.123.123
+	    '
 	for ip in $ips
 	do
 		if valid_ip $ip; then stat='good'; else stat='bad'; fi
